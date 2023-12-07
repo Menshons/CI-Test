@@ -255,7 +255,7 @@ public class MeterTest {
         energy.setPricePerMeasuredUnit(5.0);
         
         List<ObservedValue> observedValues = new ArrayList<>();
-        ObservedValue value1 = new ObservedValue(LocalDateTime.now(), 200);      
+        ObservedValue value1 = new ObservedValue(LocalDateTime.now(), 200);
         ObservedValue value2 = new ObservedValue(LocalDateTime.now().plusHours(5), 300);
         ObservedValue value3 = new ObservedValue(LocalDateTime.now().plusHours(8), 150);
 
@@ -270,7 +270,7 @@ public class MeterTest {
 
         Meter meter = new Meter(energy, null, Meter.MeterType.CumulativeValue, observedValues);
         
-        double expectedPrice = 1500.0;
+        double expectedPrice = 1500.01;
         assertEquals(expectedPrice, meter.calculatePrice());
     }
 }
