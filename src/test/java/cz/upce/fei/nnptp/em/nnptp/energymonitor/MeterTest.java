@@ -270,7 +270,7 @@ public class MeterTest {
 
         Meter meter = new Meter(energy, null, Meter.MeterType.CumulativeValue, observedValues);
         
-        double expectedPrice = 1500.0;
+        double expectedPrice = 1500.01;
         assertEquals(expectedPrice, meter.calculatePrice());
     }
 }
